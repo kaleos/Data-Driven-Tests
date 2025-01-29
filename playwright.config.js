@@ -47,18 +47,6 @@ module.exports = defineConfig({
         //     }
         // },
         // {
-        //   name: 'edge',
-        //   use: {
-        //       browserName: 'chromium',
-        //       channel: 'msedge',
-        //       headless: false,
-        //       viewport: { width: 1280, height: 720 },
-        //       screenshot: 'only-on-failure',
-        //       video: 'retain-on-failure', // Save videos for failed tests
-        //       trace: 'on-first-retry', // Capture trace for failed tests on first retry
-        //     }
-        // },
-        // {
         //   name: 'firefox',
         //   use: {
         //       browserName: 'firefox',
