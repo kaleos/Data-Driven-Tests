@@ -19,8 +19,8 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       
-      - name: Run UI tests from tests/UI folder with xvfb-run 
-        run: xvfb-run --auto-servernum -- npx playwright test tests/UI/*.spec.js --reporter=html
+      - name: Run UI tests from tests folder with xvfb-run 
+        run: xvfb-run --auto-servernum -- npx playwright test tests/*.spec.js --reporter=html
       
       - name: Upload Playwright HTML Report
         if: always() # Ensure the report is uploaded even if the tests fail
