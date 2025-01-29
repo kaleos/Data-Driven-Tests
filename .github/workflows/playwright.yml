@@ -8,8 +8,8 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
       
@@ -20,11 +20,11 @@ jobs:
         run: npx playwright install --with-deps
       
       - name: Run UI tests from tests/UI folder with xvfb-run 
-        run: xvfb-run --auto-servernum -- npx playwright test tests/
+        run: xvfb-run --auto-servernum -- npx playwright test tests --reporter=html
       
       - name: Upload Playwright HTML Report
         if: always() # Ensure the report is uploaded even if the tests fail
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
           path: playwright-report
