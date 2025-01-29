@@ -2,7 +2,7 @@ const { defineConfig } = require('@playwright/test');
 const { devices } = require('@playwright/test');
 
 module.exports = defineConfig({
-    testDir: './Tests',
+    testDir: './tests',
     timeout: 30000,
     workers: 6,
     retries: 5, // Will retry a test up to 5x, if it fails.

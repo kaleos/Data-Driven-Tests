@@ -20,7 +20,7 @@ jobs:
         run: npx playwright install --with-deps
       
       - name: Run UI tests from tests/UI folder with xvfb-run 
-        run: xvfb-run --auto-servernum -- npx playwright test tests/
+        run: xvfb-run --auto-servernum -- npx playwright test tests/ --reporter=html
       
       - name: Upload Playwright HTML Report
         if: always() # Ensure the report is uploaded even if the tests fail
