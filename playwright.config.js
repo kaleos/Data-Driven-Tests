@@ -5,7 +5,7 @@ module.exports = defineConfig({
     testDir: './Tests',
     timeout: 30000,
     workers: 6,
-    //retries: 5, // Will retry a test up to 5x, if it fails.
+    retries: 5, // Will retry a test up to 5x, if it fails.
 
     reporter: 'html',
 

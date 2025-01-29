@@ -11,7 +11,6 @@ test.beforeEach(async ({ page }) => {
   webAppPage = new WebAppPage(page);
   await page.goto(testData.baseUrl);
   await loginPage.login(testData.login.username, testData.login.password);
-  await page.waitForTimeout(3000); // Add delay to ensure page is fully loaded
 });
 
 test("Verify 'Implement user authentication' is in the 'To Do' column and has the 'Feature' and 'High Priority' tag", async () => {
