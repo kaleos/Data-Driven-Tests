@@ -15,3 +15,9 @@ npx playwright test tests/filename.spec.js --debug (For debugging)
 npx playwright test --ui (Runs all tests with a test runner like seen with Cypress)
 
 npx playwright test --grep @Web (Runs only tests with the tag @Web and if another tag is needed then it can be added to the test)
+
+# Generate an HTML report
+
+--format html:cucumber-report.html (Add at the end of any test execution command)
+
+--retry (To rerun tests that fail)
