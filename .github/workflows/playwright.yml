@@ -3,9 +3,6 @@ name: UI Tests
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
 
-env:
-BASE_URL: 'https://animated-gingersnap-8cf7f2.netlify.app/'
-
 jobs:
   UI-test:
     timeout-minutes: 10
